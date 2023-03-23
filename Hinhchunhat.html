@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id="myCanvas"width="500"height="400"style="border:1px solid black"></canvas>
+</body>
+<script>
+  class rectangle{
+    x;
+    y;
+    width;
+    height;
+    constructor(x,y,width,height) {
+      this.x = x;
+      this.y = y;
+      this.w = width;
+      this.h = height;
+    }
+    Recipe(){
+      let canvas = document.getElementById("myCanvas")
+      let ctx = canvas.getContext("2d")
+      ctx.beginPath()
+      ctx.rect(this.x,this.y,this.w,this.h)
+      ctx.fillStyle="red"
+      ctx.fill()
+      ctx.closePath()
+    }
+  }
+  let Rectangle = new rectangle(50,40,90,40)
+  Rectangle.Recipe()
+</script>
+</html>
